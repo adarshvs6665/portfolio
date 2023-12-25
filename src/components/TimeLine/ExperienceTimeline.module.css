@@ -1,0 +1,26 @@
+.description {
+  font-family: var(--fontStack) !important;
+}
+
+.heading {
+  color: rgb(var(--rgbPrimary));
+  font-weight: 900;
+  font-family: var(--fontStack);
+}
+
+.timelineConnector {
+  height: 10rem;
+}
+
+.year {
+  font-family: var(--monoFontFamily);
+  background-color: rgb(var(--rgbPrimary));
+  padding: 0.1rem 0.8rem;
+  user-select: none;
+  color: rgb(var(--rgbBackground));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--fontStack);
+  text-align: center !important;
+}
