@@ -1,2 +1,2 @@
 
-export { Slice as default } from './Resume';
+export { Resume as default } from './Resume';

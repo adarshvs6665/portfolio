@@ -17,7 +17,7 @@ const options = {
 };
 
 const ResumeTemplate = () => {
-  const [width, setWidth] = useState(1200);
+  const [width, setWidth] = useState(800);
   const [file, setFile] = useState('../resume.pdf');
 
   useEffect(() => {
@@ -26,9 +26,9 @@ const ResumeTemplate = () => {
 
   return (
     <Box>
-      <Document file={file}>
-        <Page pageNumber={1} scale={width > 786 ? 1.9 : 0.6} />
-        <Page pageNumber={2} scale={width > 786 ? 1.9 : 0.6} />
+      <Document file={file} options={options} >
+        <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
+        <Page pageNumber={2} scale={width > 786 ? 1.7 : 0.6} />
       </Document>
     </Box>
   );

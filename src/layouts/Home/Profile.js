@@ -81,7 +81,7 @@ export const Profile = ({ id, visible, sectionRef }) => {
                 <Button iconHoverShift href={'/skills'} iconEnd="arrowRight">
                   Skillset
                 </Button>
-                <Button iconHoverShift href={'#'} iconEnd="arrowRight">
+                <Button iconHoverShift href={'/resume'} iconEnd="arrowRight">
                   Resume
                 </Button>
               </div>
