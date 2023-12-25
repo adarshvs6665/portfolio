@@ -4,15 +4,19 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://adarshvs.com/contact/</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
     <loc>https://adarshvs.com/experience/</loc>
     <changefreq>monthly</changefreq>
   </url>
   <url>
+    <loc>https://adarshvs.com/contact/</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>https://adarshvs.com/projects/</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://adarshvs.com/resume/</loc>
     <changefreq>monthly</changefreq>
   </url>
   <url>
