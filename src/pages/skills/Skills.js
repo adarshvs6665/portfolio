@@ -50,7 +50,7 @@ const roles = ['User Research', 'UX Design', 'Interface Design'];
 export const Slice = () => {
   return (
     <Fragment>
-      <Meta title={title} prefix="Projects" description={description} />
+      <Meta title={title} prefix="Adarsh" description={description} />
       <ProjectContainer className={styles.slice}>
         {/* <ProjectBackground
           src={sliceBackground}

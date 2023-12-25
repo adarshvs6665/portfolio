@@ -10,7 +10,9 @@ import { forwardRef, useRef } from 'react';
 import { classes, cssProps, msToNum, numToMs } from 'utils/style';
 import styles from './Project.module.css';
 import Techstack from 'pages/skills/TechStack';
+// import ResumeTemplate from 'pages/resume/ResumeTemplate';
 import { ExperienceTimeline } from 'components/TimeLine';
+import dynamic from 'next/dynamic';
 
 const initDelay = 300;
 
@@ -65,6 +67,33 @@ export function ProjectHeader({
   );
 }
 
+const ResumeTemplate = dynamic(() => import("pages/resume/ResumeTemplate.js"), {
+  ssr: false
+});
+
+export function CustomResumeHeader({ title, description, className }) {
+  return (
+    <Section className={classes(styles.header, className)} as="section">
+      <div
+        className={styles.headerContent}
+        style={cssProps({ initDelay: numToMs(initDelay) })}
+      >
+        <div className={styles.details}>
+          <Heading className={styles.title} level={2} as="h1">
+            {title}
+          </Heading>
+          <Text className={styles.description} size="xl" as="p">
+            {description}
+          </Text>
+          <div className={styles.techStack}>
+            <ResumeTemplate />
+          </div>
+        </div>
+      </div>
+    </Section>
+  );
+}
+
 export function CustomSkillsHeader({
   title,
   description,
@@ -110,7 +139,7 @@ export function CustomExperienceHeader({ title, description, className, timeLine
             {description}
           </Text>
           <div className={styles.experienceTimeline}>
-          <ExperienceTimeline timeLine={timeLine} />
+            <ExperienceTimeline timeLine={timeLine} />
           </div>
         </div>
       </div>
