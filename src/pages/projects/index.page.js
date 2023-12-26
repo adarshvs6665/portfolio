@@ -1,4 +1,3 @@
-import sliceBackgroundLarge from 'assets/slice-background-large.jpg';
 import videoIdeDarkLarge from 'assets/v2/projects/video-ide/video-ide-dark-large.png';
 import visualCodeLarge from 'assets/v2/projects/visual-code/visual-code-dark-large.png';
 import mhealthLarge from 'assets/v2/projects/mhealth/mhealth-background-large.png';
@@ -15,6 +14,7 @@ export function getStaticProps() {
       // timecode: '00:04:36:30',
       featured: true,
       slug: 'mhealth',
+      readMore: true
     },
     {
       title: 'VisualCode',
@@ -25,6 +25,7 @@ export function getStaticProps() {
       // timecode: '00:04:36:30',
       featured: false,
       slug: 'visual-code',
+      readMore: true
     },
     {
       title: 'VideoIDE',
@@ -34,6 +35,17 @@ export function getStaticProps() {
       // timecode: '00:04:36:30',
       featured: false,
       slug: 'video-ide',
+      readMore: true
+    },
+    {
+      title: 'Inlife',
+      abstract: 'An interactive educational platform for students.',
+      date: '2023-01-21',
+      banner: videoIdeDarkLarge,
+      // timecode: '00:04:36:30',
+      featured: false,
+      slug: '',
+      readMore: false
     },
   ];
 

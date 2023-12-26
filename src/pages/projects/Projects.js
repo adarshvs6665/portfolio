@@ -16,7 +16,6 @@ import { formatDate } from 'utils/date';
 import { classes, cssProps } from 'utils/style';
 import styles from './Projects.module.css';
 
-
 const ProjectItem = ({
   slug,
   title,
@@ -26,6 +25,7 @@ const ProjectItem = ({
   banner,
   timecode,
   index,
+  readMore,
 }) => {
   const [hovered, setHovered] = useState(false);
   const [dateTime, setDateTime] = useState(null);
@@ -34,7 +34,7 @@ const ProjectItem = ({
   useEffect(() => {
     setDateTime(formatDate(date));
   }, [date, dateTime]);
-  
+
   const handleMouseEnter = () => {
     setHovered(true);
   };
@@ -66,7 +66,7 @@ const ProjectItem = ({
           />
         </div>
       )}
-      <RouterLink href={`/projects/${slug}`} scroll={false}>
+      <RouterLink href={readMore ? `/projects/${slug}` : ''} scroll={false}>
         <a
           className={styles.postLink}
           onMouseEnter={handleMouseEnter}
@@ -84,9 +84,11 @@ const ProjectItem = ({
               {abstract}
             </Text>
             <div className={styles.postFooter}>
-              <Button secondary iconHoverShift icon="chevronRight" as="div">
-                Read more
-              </Button>
+              {readMore && (
+                <Button secondary iconHoverShift icon="chevronRight" as="div">
+                  Read more
+                </Button>
+              )}
               <Text className={styles.timecode} size="s">
                 {timecode}
               </Text>
@@ -96,7 +98,7 @@ const ProjectItem = ({
       </RouterLink>
       {featured && (
         <Text aria-hidden className={styles.postTag} size="s">
-          477
+          {title}
         </Text>
       )}
     </article>
@@ -174,10 +176,7 @@ export const Projects = ({ projects, featured }) => {
 
   return (
     <article className={styles.articles}>
-      <Meta
-        prefix="Projects"
-        description="List of projects."
-      />
+      <Meta prefix="Projects" description="List of projects." />
       <Section className={styles.content}>
         {!isSingleColumn && (
           <div className={styles.grid}>

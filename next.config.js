@@ -34,7 +34,7 @@ module.exports = {
       type: 'asset/source',
     });
 
-    config.resolve.alias.canvas = false;
+    // config.resolve.alias.canvas = false;
 
     return config;
   },
